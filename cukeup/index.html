@@ -37,6 +37,12 @@
 <li>Joint moderator of Cucumber mailing list</li>
 </ul>
 </div>
+      <div class='step' >
+    
+<h2>I work for</h2>
+
+<p><img src="fglogo.png" alt="fg logo"></p>
+</div>
       <div class='step'  data-y="1000" data-scale="2">
     
 <h2>First conference presentation</h2>
@@ -53,7 +59,7 @@
 <li><a href="https://github.com/diabolo/cuke_up">https://github.com/diabolo/cuke_up</a></li>
 </ul>
 </div>
-      <div class='step' >
+      <div class='step'  data-y="1000" data-scale="2">
     
 <h2>Mechanics of talk</h2>
 
@@ -94,6 +100,168 @@ the debugger gem installed, some debug steps and a little utility I use to
 </div>
       <div class='step' >
     
+<h1>Why World?</h1>
+
+<h2>a World in which</h2>
+
+<ol>
+<li>application behaviour can be described</li>
+<li>things can be run</li>
+<li>tools can be created</li>
+</ol>
+</div>
+      <div class='step' >
+    
+<h1>In our World</h1>
+
+<h2>Define and follow conventions to ...</h2>
+
+<ol>
+<li>Simplify</li>
+<li>Configure</li>
+</ol>
+</div>
+      <div class='step' >
+    
+<p><strong>We can establish a vocabulary/dictionary. This will be very influential
+   on the code we create</strong></p>
+</div>
+      <div class='step' >
+    
+<h2>Our World can become</h2>
+
+<ul>
+<li>a <code class='inline prettyprint'>map</code> of our application&#39;s <code class='inline prettyprint'>territory</code></li>
+<li>a facilitator to create new functionality and new territory</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Make it simple</h1>
+
+<p>Once the concept of a world is central then everything you do with Cucumber
+should make your world a better place.</p>
+</div>
+      <div class='step' >
+    
+<h1>Make it eloquent</h1>
+
+<p>Making your world a better place allows you to make your application a better
+place</p>
+</div>
+      <div class='step' >
+    
+<p>and now a quick aside</p>
+</div>
+      <div class='step'  data-x="2000" data-scale="2">
+    
+<h1>Communicating between steps</h1>
+
+<p>There are 3 main ways to do this</p>
+</div>
+      <div class='step'  data-x="4000" data-scale="2">
+    
+<h2>Use a variable</h2>
+
+<ul>
+<li>easy and dangerous. Variables can vary, global variables can vary
+anywhere. If you have to many of them it is very easy to get into a terrible
+mess.</li>
+</ul>
+</div>
+      <div class='step'  data-x="6000" data-scale="2">
+    
+<h2>Look for the only/last instance</h2>
+
+<ul>
+<li>simple, but starts to get messy when you deal with multiple instances</li>
+</ul>
+</div>
+      <div class='step'  data-x="8000" data-scale="2">
+    
+<h2>Name the instance, and then lookup the instance using the name</h2>
+
+<ul>
+<li>most flexible, but makes scenarios more verbose. Every step in the
+scenario has to contain the name</li>
+</ul>
+</div>
+      <div class='step'  data-x="1000" data-scale="2">
+    
+<p><strong>It turns out there are a few occasions where we can use
+global variables effectively.</strong></p>
+</div>
+      <div class='step' >
+    
+<p><strong>These occur when the things we are capturing:</strong></p>
+
+<ul>
+<li>don&#39;t vary</li>
+<li>fit as being global in our world</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<p><strong>The perfect candidate for this are people</strong></p>
+</div>
+      <div class='step' >
+    
+<h1>Populating our world</h1>
+
+<h2>Remembering to</h2>
+
+<ul>
+<li>simplify</li>
+<li>establish conventions</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<p><strong>We will say the following:</strong></p>
+</div>
+      <div class='step' >
+    
+<p>people have unique first names</p>
+</div>
+      <div class='step' >
+    
+<p>the variable for a person is their first name
+  - e.g. William is @william</p>
+</div>
+      <div class='step' >
+    
+<p>There is one more variable to consider ...</p>
+</div>
+      <div class='step' >
+    
+<p>A single variable which will vary</p>
+</div>
+      <div class='step' >
+    
+<p>A variable that is the most important and has the shortest name</p>
+</div>
+      <div class='step' >
+    
+<h1>@i</h1>
+</div>
+      <div class='step' >
+    
+<h2>@i the most important variable</h2>
+
+<p>The most important variable is @i. We use this all the time; so when we say</p>
+<pre><code class='prettyprint '>Given I am an administrator
+</code></pre>
+<p>we will have</p>
+<pre><code class='prettyprint '>Given "I am an administrator" do
+  @i = Administrator...
+end
+</code></pre>
+<p>&#39;I&#39; is related to &#39;my&#39; so</p>
+<pre><code class='prettyprint '>Given I am a
+And I have signed in
+</code></pre>
+<p><strong>so now lets look at some code (v2)</strong></p>
+
       </div>
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
