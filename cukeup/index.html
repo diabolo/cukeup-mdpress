@@ -248,18 +248,40 @@ global variables effectively.</strong></p>
     
 <h2>@i the most important variable</h2>
 
-<p>The most important variable is @i. We use this all the time; so when we say</p>
-<pre><code class='prettyprint '>Given I am an administrator
-</code></pre>
-<p>we will have</p>
-<pre><code class='prettyprint '>Given "I am an administrator" do
-  @i = Administrator...
+<p>We use this all the time</p>
+</div>
+      <div class='step' >
+    <pre><code class='prettyprint '>Given I am an administrator
+
+Given "I am an administrator" do
+  @i = create_admin
 end
-</code></pre>
-<p>&#39;I&#39; is related to &#39;my&#39; so</p>
-<pre><code class='prettyprint '>Given I am a
-And I have signed in
-</code></pre>
+</code></pre></div>
+      <div class='step' >
+    <pre><code class='prettyprint '>Given I am signed in as William
+
+Given /^I am signed in as (\w+)$/ do |name|
+  @i = create_user(name)
+  sign_in_as @i
+end
+</code></pre></div>
+      <div class='step' >
+    
+<h2>&#39;I&#39; is related to &#39;my&#39; so</h2>
+<pre><code class='prettyprint '>When I sign in
+Then I should see my welcome
+</code></pre></div>
+      <div class='step' >
+    <pre><code class='prettyprint '>When "I sign in" do
+  sign_in_as @i
+end
+
+Then "I should see my welcome" do
+  should_see_welcome_of @i
+end
+</code></pre></div>
+      <div class='step' >
+    
 <p><strong>so now lets look at some code (v2)</strong></p>
 
       </div>

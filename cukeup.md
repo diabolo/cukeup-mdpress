@@ -183,21 +183,43 @@ A variable that is the most important and has the shortest name
 
 ---
 
-
 ## @i the most important variable
 
-The most important variable is @i. We use this all the time; so when we say
+We use this all the time
+
+---
 
     Given I am an administrator
 
-we will have
-
     Given "I am an administrator" do
-      @i = Administrator...
+      @i = create_admin
     end
 
-'I' is related to 'my' so
+---
 
-    Given I am a
-    And I have signed in
+    Given I am signed in as William
+
+    Given /^I am signed in as (\w+)$/ do |name|
+      @i = create_user(name)
+      sign_in_as @i
+    end
+
+---
+
+## 'I' is related to 'my' so
+
+    When I sign in
+    Then I should see my welcome
+
+---
+
+    When "I sign in" do
+      sign_in_as @i
+    end
+
+    Then "I should see my welcome" do
+      should_see_welcome_of @i
+    end
+
+---
 **so now lets look at some code (v2)**
