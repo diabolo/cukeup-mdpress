@@ -223,3 +223,52 @@ We use this all the time
 
 ---
 **so now lets look at some code (v2)**
+---
+
+**what benefits can we gain from this approach**
+
+---
+
+# Dealing with sad paths (v3)
+
+- sad paths can leverage happy path code
+
+---
+
+# Creating new functionality
+
+---
+
+# Provide opportunity for shortcutting
+
+- use tense to provide convention for shortcutting
+
+---
+
+# Features become code
+
+---
+
+# Implementing features is programming
+
+---
+
+# Writing features benefits from
+
+- natural language skills
+- programming skills
+
+---
+
+# Metaphors can give insight
+
+---
+
+- the `map` and `territory` metaphor
+
+---
+
+- the `World` metaphor
+
+---
+# Thankyou
