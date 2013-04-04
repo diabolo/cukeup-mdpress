@@ -239,13 +239,24 @@ We use this all the time
 
 ---
 
+# A limitation of World
+
+- v4 and v5
+
+---
 # Provide opportunity for shortcutting
 
-- use tense to provide convention for shortcutting
+## use tense to provide convention for shortcutting
+- there is (already created so shortcut)
+- otherwise go through UI
 
 ---
 
 # Features become code
+
+- features change over time
+- become code when implemented
+- ownership changes
 
 ---
 
@@ -271,4 +282,16 @@ We use this all the time
 - the `World` metaphor
 
 ---
+
+# Qualities of a good World
+
+- low method count
+- high method reuse
+- simple
+- eloquent
+
+- number of step defs is irrelevant!
+---
+
 # Thankyou
+
